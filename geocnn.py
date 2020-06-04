@@ -25,7 +25,7 @@ torch.cuda.manual_seed_all(seed)
 # Configuration
 
 file_name = __file__.split('.')[0]
-batch_size = 2
+batch_size = 16
 num_workers = 4
 cuda = torch.cuda.is_available()
 accumulation_steps = 1  # Gradient accumulation steps
