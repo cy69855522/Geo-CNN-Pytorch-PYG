@@ -10,7 +10,7 @@ A Pytorch re-implementation of “Modeling Local Geometric Structure of 3D Point
   - Cuda 10.2
   - Cudnn 7.6.5
   - GPU Memory >= 8G
-- If you like graph neural network, welcome to our 🐧 QQ group: `832405795`
+- If you like graph neural network, too. Welcome to our 🐧 QQ group: `832405795`
 
 ## Accuracy on ModelNet40
 |this implementation|original paper|
