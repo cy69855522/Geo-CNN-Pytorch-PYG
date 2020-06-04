@@ -22,8 +22,8 @@ A Pytorch Implementation of “Modeling Local Geometric Structure of 3D Point Cl
   - Rename `modelnet40_normal_resampled` to `raw`
 - Train
   - We can change args in the `Configuration` part of the code
-  - Then Let’s start training: `python geocnn.py`
+  - Then let’s start training: `python geocnn.py`
 - Test
   - Uncomment these two lines of code and replace the weight path
   - Comment out this line `# train(epoch)`
-  - Then Let’s start testing: `python geocnn.py`
+  - Then let’s start testing: `python geocnn.py`
