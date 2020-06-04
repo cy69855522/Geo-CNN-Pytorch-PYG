@@ -3,9 +3,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-
 from torch_geometric.data import InMemoryDataset, Data
-
 import math
 import random
 from tqdm import tqdm
@@ -29,7 +27,6 @@ class MovePoints(object):
     def __call__(self, data):
         data['pos'] += torch.ones(3, dtype=data.pos.dtype, device=data.pos.device).uniform_(self.low, self.high)
         return data
-
 
 class ScalePoints(object):
     def __init__(self, srange=(2./3, 3./2)):
