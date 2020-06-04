@@ -12,7 +12,6 @@ A Pytorch Implementation of “Modeling Local Geometric Structure of 3D Point Cl
   - Move `modelnet40_normal_resampled.zip` into `data/ModelNet40_10000`
   - Unzip `modelnet40_normal_resampled.zip`
   - Rename `modelnet40_normal_resampled` to `raw`
-  - Remove `modelnet40_normal_resampled.zip`
 - Train
   - We can change args in the `Configuration` part of the code
   - Then Let’s start training: `python geocnn.py`
