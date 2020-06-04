@@ -18,10 +18,9 @@ A Pytorch Implementation of “Modeling Local Geometric Structure of 3D Point Cl
   - Then Let’s start training: `python geocnn.py`
 - Test
   - Uncomment the following two lines of code and replace the weight path
-  
-    '''python
+    ```python
     #model.load_state_dict(torch.load('geocnn_epoch_235_0.9323338735818476', map_location=f'cuda:{device_list[0]}'), strict=True)
     #optimizer.load_state_dict(torch.load('geocnn_optimizer.pt', map_location=f'cuda:{device_list[0]}').state_dict())
-    '''
+    ```
   - Comment out this line `#train(epoch)`
   - Then Let’s start testing: `python geocnn.py`
