@@ -11,7 +11,7 @@ A Pytorch Implementation of “Modeling Local Geometric Structure of 3D Point Cl
   - Download [ModelNet40](https://shapenet.cs.stanford.edu/media/modelnet40_normal_resampled.zip) data set
   - Move `modelnet40_normal_resampled.zip` into `data/ModelNet40_10000`
   - Unzip `modelnet40_normal_resampled.zip`
-  - Rename `modelnet40_normal_resampled.zip` to `raw`
+  - Rename `modelnet40_normal_resampled` to `raw`
   - Remove `modelnet40_normal_resampled.zip`
 - Train
   - We can change args in the `Configuration` part of the code
