@@ -197,7 +197,6 @@ def knn(x, k, d=1, f=None): # x[B, N, C] f[B*n]
     return sid, tid # [B*n*k]
 
 def sphg(pos, r, batch=None, flow='source_to_target', max_num_neighbors=48, fpsi=None, resetFpsi=False, random_replace=True):
-    # If the "pos" contains points of the same position, the self-loop may be generated even if the loop is set to False
     # Make sure "batch" is ascending
     assert flow in ['source_to_target', 'target_to_source']
 
