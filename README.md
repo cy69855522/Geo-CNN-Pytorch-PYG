@@ -26,6 +26,6 @@ A Pytorch Implementation of “Modeling Local Geometric Structure of 3D Point Cl
   - We can change args in the `Configuration` part of the code if you want
   - Then let’s start training: `python geocnn.py`
 - Test
-  - Uncomment this line and replace the weight path
-  - Comment out this line `# train(epoch)`
+  - Uncomment [this line](https://github.com/cy69855522/Geo-CNN-Pytorch-PYG/blob/master/geocnn.py#L248) and replace the weight path
+  - Set `only_test` as `True`
   - Then let’s start testing: `python geocnn.py`
