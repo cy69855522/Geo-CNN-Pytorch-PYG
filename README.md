@@ -9,6 +9,7 @@ A Pytorch Implementation of “Modeling Local Geometric Structure of 3D Point Cl
   - PYG 1.5.0
   - Cuda 10.2
   - Cudnn 7.6.5
+  - GPU Memory >= 8G
 
 ## Accuracy on ModelNet40
 |this implementation|original paper|
@@ -25,6 +26,6 @@ A Pytorch Implementation of “Modeling Local Geometric Structure of 3D Point Cl
   - We can change args in the `Configuration` part of the code if you want
   - Then let’s start training: `python geocnn.py`
 - Test
-  - Uncomment these two lines of code and replace the weight path
+  - Uncomment this line and replace the weight path
   - Comment out this line `# train(epoch)`
   - Then let’s start testing: `python geocnn.py`
