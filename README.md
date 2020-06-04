@@ -4,9 +4,9 @@ A Pytorch re-implementation of “Modeling Local Geometric Structure of 3D Point
 - This repository is a reproduction of the **GeoCNN**, which can support multiple GPUs.
 - My enviroment:
   - Ubuntu 18.04
-  - Python 3.7
-  - Pytorch 1.5.0
-  - PYG 1.5.0
+  - Anaconda Python 3.7
+  - [Pytorch](https://github.com/pytorch/pytorch) 1.5.0
+  - [PYG](https://github.com/rusty1s/pytorch_geometric) 1.5.0
   - Cuda 10.2
   - Cudnn 7.6.5
   - GPU Memory >= 8G
