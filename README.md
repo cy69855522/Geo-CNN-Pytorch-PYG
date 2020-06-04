@@ -23,9 +23,9 @@ A Pytorch Implementation of “Modeling Local Geometric Structure of 3D Point Cl
   - Unzip `modelnet40_normal_resampled.zip`
   - Rename `modelnet40_normal_resampled` to `raw`
 - Train
-  - We can change args in the `Configuration` part of the code if you want
+  - We can change args in the [Configuration part](https://github.com/cy69855522/Geo-CNN-Pytorch-PYG/blob/master/geocnn.py#L25) of the code if you want
   - Then let’s start training: `python geocnn.py`
 - Test
   - Uncomment [this line](https://github.com/cy69855522/Geo-CNN-Pytorch-PYG/blob/master/geocnn.py#L248) and replace the weight path
-  - Set `only_test` as `True`
+  - Set [only_test](https://github.com/cy69855522/Geo-CNN-Pytorch-PYG/blob/master/geocnn.py#L40) as `True`
   - Then let’s start testing: `python geocnn.py`
