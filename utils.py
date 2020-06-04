@@ -240,5 +240,5 @@ def sphg(pos, r, batch=None, flow='source_to_target', max_num_neighbors=48, fpsi
     
 
 if __name__ == "__main__":
-    train_dataset = ModelNet40('/mnt/md0/data/ModelNet40_10000', '40')
+    train_dataset = ModelNet40('data/ModelNet40_10000')
     draw(train_dataset[0].pos)
