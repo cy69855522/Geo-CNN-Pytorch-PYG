@@ -245,7 +245,7 @@ class Net(nn.Module):
 
 model = Net(train_dataset.num_classes)
 model = model.to(device)
-model.load_state_dict(torch.load('weight.pth', map_location=f'cuda:{device_list[0]}'), strict=True)
+# model.load_state_dict(torch.load('weight.pth', map_location=f'cuda:{device_list[0]}'), strict=True)
 if cuda: model = DataParallel(model, device_ids=device_list)
 optimizer = torch.optim.Adam([{'params': model.parameters(), 'initial_lr': base_lr}], lr=base_lr, weight_decay=1e-4)
 # optimizer.load_state_dict(torch.load('geocnn_optimizer.pt', map_location=f'cuda:{device_list[0]}').state_dict())
