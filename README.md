@@ -29,3 +29,23 @@ A Pytorch Implementation of “Modeling Local Geometric Structure of 3D Point Cl
   - Uncomment [this line](https://github.com/cy69855522/Geo-CNN-Pytorch-PYG/blob/master/geocnn.py#L248) and replace the weight path
   - Set [only_test](https://github.com/cy69855522/Geo-CNN-Pytorch-PYG/blob/master/geocnn.py#L40) as `True`
   - Then let’s start testing: `python geocnn.py`
+
+## Bibtex
+```python
+@article{DBLP:journals/corr/abs-1811-07782,
+  author    = {Shiyi Lan and
+              Ruichi Yu and
+              Gang Yu and
+              Larry S. Davis},
+  title     = {Modeling Local Geometric Structure of 3D Point Clouds using Geo-CNN},
+  journal   = {CoRR},
+  volume    = {abs/1811.07782},
+  year      = {2018},
+  url       = {http://arxiv.org/abs/1811.07782},
+  archivePrefix = {arXiv},
+  eprint    = {1811.07782},
+  timestamp = {Mon, 26 Nov 2018 12:52:45 +0100},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1811-07782},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+```
