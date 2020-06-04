@@ -1,5 +1,5 @@
 # Geo-CNN-Pytorch-PYG
-A Pytorch Implementation of “Modeling Local Geometric Structure of 3D Point Clouds using Geo-CNN”
+A Pytorch re-implementation of “Modeling Local Geometric Structure of 3D Point Clouds using Geo-CNN”
 
 - This repository is a reproduction of the GeoCNN, which can support multiple GPUs.
 - My enviroment:
