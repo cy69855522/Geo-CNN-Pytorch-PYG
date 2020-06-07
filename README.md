@@ -15,7 +15,7 @@ A Pytorch re-implementation of “Modeling Local Geometric Structure of 3D Point
 ## Accuracy on ModelNet40
 |this implementation|original paper|
 |---|---|
-|93.?|93.4|
+|93.2|93.4|
 
 ## How to Use This Code
 - Prepare Data
