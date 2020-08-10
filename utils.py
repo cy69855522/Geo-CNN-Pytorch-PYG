@@ -4,6 +4,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch_geometric.data import InMemoryDataset, Data
+from torch_geometric.io import read_txt_array
 import math
 import random
 from tqdm import tqdm
@@ -240,5 +241,5 @@ def sphg(pos, r, batch=None, flow='source_to_target', max_num_neighbors=48, fpsi
     
 
 if __name__ == "__main__":
-    train_dataset = ModelNet40('data/ModelNet40_10000')
+    train_dataset = ModelNet40_10000('ModelNet40_10000')
     print(train_dataset[0].pos)

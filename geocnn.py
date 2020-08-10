@@ -179,9 +179,8 @@ class PointPlus(nn.Module):  # PointNet++
         return y
 
 class Net(nn.Module):
-    def __init__(self, out_channels, norm='bn', k=16):
+    def __init__(self, out_channels, norm='bn'):
         super(Net, self).__init__()
-        self.k = k
 
         # branch1
         self.pp1 = PointPlus(6, 64, norm, first_layer=True)
@@ -218,23 +217,23 @@ class Net(nn.Module):
         x = torch.cat([pos, norm], dim=-1)
 
         # branch1
-        id_euc = knn(pos.view(B, N, -1), self.k)
+        id_euc = knn(pos.view(B, N, -1), 16)
         x1 = self.pp1(x, B, N, id_euc)  # [B*N, C]
         x2 = self.pp2(x1, B, N, id_euc)
         x3 = self.pp3(x2, B, N, id_euc)
 
         # branch2
         x4 = self.lin1(x.view(B, N, -1)).view(B*N, -1)  # [B*N, C]
-        id_euc = sphg(pos, 0.15, batch=batch, max_num_neighbors=self.k)
+        id_euc = sphg(pos, 0.15, batch=batch, max_num_neighbors=16)
         x5 = self.conv1(x4, pos, B, N, id_euc)  # [B*N, C]
 
         x6 = self.lin2(x5.view(B, N, -1)).view(B*N, -1)
-        id_euc = sphg(pos, 0.3, batch=batch, max_num_neighbors=self.k)
+        id_euc = sphg(pos, 0.3, batch=batch, max_num_neighbors=16)
         x7 = self.conv2(x6, pos, B, N, id_euc)  # [B*N, C]
 
         # master
         x8 = torch.cat([x3, x7], dim=-1)  # [B*N, C]
-        id_euc = sphg(pos, 0.6, batch=batch, max_num_neighbors=self.k)
+        id_euc = sphg(pos, 0.6, batch=batch, max_num_neighbors=16)
         x9 = self.conv3(x8, pos, B, N, id_euc)
         x10 = self.lin3(x9.view(B, N, -1))
         x = x10.max(1)[0]  # [B, C]
@@ -246,7 +245,7 @@ class Net(nn.Module):
 
 model = Net(train_dataset.num_classes)
 model = model.to(device)
-# model.load_state_dict(torch.load('weight.pth', map_location=f'cuda:{device_list[0]}'), strict=True)
+model.load_state_dict(torch.load('weight.pth', map_location=f'cuda:{device_list[0]}'), strict=True)
 if cuda: model = DataParallel(model, device_ids=device_list)
 optimizer = torch.optim.Adam([{'params': model.parameters(), 'initial_lr': base_lr}], lr=base_lr, weight_decay=1e-4)
 # optimizer.load_state_dict(torch.load('geocnn_optimizer.pt', map_location=f'cuda:{device_list[0]}').state_dict())
